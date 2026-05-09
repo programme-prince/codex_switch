@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pkill -f \"dist/cli.js\")",
+      "Bash(pkill -f \"18800\")",
+      "Bash(npm -v)",
+      "Bash(npm install *)",
+      "Bash(env)",
+      "Bash(cp ~/.codex/auth.json ~/.codex/auth.json.bak-openai)",
+      "Bash(cp ~/.codex/config.toml ~/.codex/config.toml.bak-openai)",
+      "Bash(curl -s http://127.0.0.1:8788/v1/models -H \"Authorization: Bearer mimo2codex-local\")",
+      "Bash(node dist/cli.js --help)",
+      "Bash(curl -s http://127.0.0.1:8788/healthz)",
+      "Bash(curl -s http://127.0.0.1:8788/v1/models -H \"Authorization: Bearer test\")",
+      "Bash(curl -s http://127.0.0.1:8788/v1/responses -H 'Content-Type: application/json' -H 'Authorization: Bearer test' -d '{ *)",
+      "Bash(node dist/cli.js --provider mimo print-cc-switch)",
+      "Bash(node dist/cli.js --provider deepseek print-cc-switch)",
+      "Bash(curl -s http://127.0.0.1:8789/healthz)",
+      "Bash(node dist/cli.js --provider mimo --port 8788 print-cc-switch)",
+      "Bash(node dist/cli.js --provider deepseek --port 8789 print-cc-switch)",
+      "Bash(curl -s http://127.0.0.1:8789/v1/models -H \"Authorization: Bearer test\")",
+      "Bash(bash 'D:\\\\Desktop\\\\JSProject\\\\mimo2codex\\\\mimoskill\\\\scripts\\\\install_pet.sh' 'D:\\\\Desktop\\\\JSProject\\\\mimo2codex\\\\tools\\\\white-rabbit-pet.png' 'white-rabbit')",
+      "Read(//c/Users/毛毛/.codex/**)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('selected-avatar-id:', d.get\\('selected-avatar-id'\\)\\)\")",
+      "Bash(where codex *)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "Bash(gh repo *)",
+      "Bash(npm list *)",
+      "WebFetch(domain:developers.openai.com)",
+      "Bash(\"/c/Users/毛毛/AppData/Local/OpenAI/Codex/bin/codex.exe\" --help)",
+      "Bash(\"/c/Users/毛毛/AppData/Local/OpenAI/Codex/bin/codex.exe\" debug *)",
+      "Bash(\"/c/Users/毛毛/AppData/Local/OpenAI/Codex/bin/codex.exe\" features *)",
+      "Bash(reg query *)"
+    ]
+  }
+}

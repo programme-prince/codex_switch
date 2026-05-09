@@ -1,0 +1,32 @@
+# Belt-and-braces: even though `files` in package.json controls what ships,
+# we also list build / dev / Python-cache patterns here so a stray pycache
+# can't sneak into the published tarball.
+
+# Source (we ship dist/ instead)
+src/
+test/
+tsconfig.json
+vitest.config.ts
+
+# Bootstrap scripts (only useful for git-clone path, not npm consumers)
+scripts/
+
+# Maintainer-only docs
+PUBLISHING.md
+
+# Python caches that would otherwise get included from mimoskill/scripts/
+__pycache__/
+*.pyc
+*.pyo
+
+# Tarballs and lockfiles
+*.tgz
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# IDE / OS junk
+.vscode/
+.idea/
+.DS_Store
+*.swp

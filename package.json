@@ -1,0 +1,69 @@
+{
+  "name": "mimo2codex",
+  "version": "0.1.0",
+  "description": "Local proxy that lets the latest OpenAI Codex CLI / desktop talk to Xiaomi MiMo (V2.5 Pro) via the Responses API by translating to Chat Completions on the fly.",
+  "keywords": [
+    "codex",
+    "codex-cli",
+    "openai",
+    "mimo",
+    "xiaomi",
+    "xiaomimimo",
+    "mimo-v2.5",
+    "responses-api",
+    "chat-completions",
+    "proxy",
+    "adapter",
+    "router",
+    "cc-switch",
+    "llm"
+  ],
+  "type": "module",
+  "bin": {
+    "mimo2codex": "dist/cli.js"
+  },
+  "main": "dist/server.js",
+  "files": [
+    "dist",
+    "codex_pet_generate",
+    "AGENTS.md",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "start": "node dist/cli.js",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm run build && npm test",
+    "release:patch": "npm version patch && npm publish && git push --follow-tags",
+    "release:minor": "npm version minor && npm publish && git push --follow-tags",
+    "release:major": "npm version major && npm publish && git push --follow-tags"
+  },
+  "dependencies": {
+    "eventsource-parser": "^3.0.0",
+    "nanoid": "^5.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.4.0"
+  },
+  "author": "7as0nch",
+  "license": "MIT",
+  "homepage": "https://github.com/7as0nch/mimo2codex#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/7as0nch/mimo2codex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/7as0nch/mimo2codex/issues"
+  }
+}
